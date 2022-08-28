@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contents {
+    display: flex;
+    height: 500px;
+    background-color:  #fffacd;
+    justify-content: space-around;
+    align-items: center;
+    position: relative; 
+}   
+
+.card {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    background-color: cornflowerblue;
+    transition: width 3s, height 3s, background-color 3s, transform 3s;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card_front {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+.card_top {
+    z-index: 5;
+    top: 10%;
+    left: 30%;
+    
+}
+
+.card_middle {
+    z-index: 3;
+    top: 20%;
+    right: 45%;
+    /* transition: width 2s, height 2s, background-color 2s, transform 2s;     */
+}
+
+.card_bottom {
+    z-index: 1;
+    top: 30%;
+    right: 35%;
+    /* transition: width 2s, height 2s, background-color 2s, transform 2s;     */
+}
+
+.card:hover {
+    z-index: 100;
+    transform: rotate(360deg);
+}
